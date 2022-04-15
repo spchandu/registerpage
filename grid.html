@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Rubik+Moonrocks&display=swap');
+        *{
+            margin:0;
+        }
+
+        body{
+            background: #333;
+        }
+        .nav-bar{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+            background:black;
+        }
+
+        .li1{
+            display:inline-block;
+            padding:20px;
+        }
+        
+        .active{
+            text-decoration: none;
+            font-size: 23px;
+            color:white;
+        }
+        
+        .grid-div{
+            height: 1250px;
+            width:97%;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5, 1fr);
+            column-gap:6px;
+            row-gap: 6px;
+            padding:6px;
+            }
+
+        .inner-div{
+            background:black;
+            color:white;
+            padding:7px;
+            transition-duration:500ms;
+            text-align: center;
+        }
+
+        .inner-div:hover{
+           
+           background:#722620;
+        }
+
+        .div1{
+            grid-column-start:1;
+            grid-column-end: 3;
+        }
+
+        .div2{
+            grid-column-start:3;
+            grid-column-end: 4;
+            grid-row-start:1;
+            grid-row-end: 3;
+        }
+        .div4{
+            grid-column-start:1;
+            grid-column-end: 2;
+            grid-row-start:2;
+            grid-row-end: 4;
+        }
+
+        .div7{
+            grid-column-start:2;
+            grid-column-end: 5;
+            grid-row-start:3;
+            grid-row-end: 4;
+            display:flex;
+        }
+
+        .div13{
+            grid-column-start:2;
+            grid-column-end: 4;
+            grid-row-start:5;
+            grid-row-end: 6;
+        }
+
+        .div11{
+            grid-column-start:4;
+            grid-column-end: 5;
+            grid-row-start:4;
+            grid-row-end: 6;
+        }
+
+
+        h1{
+           
+            font-family: Righteous;
+            font-size: 70px;
+            color:white;
+            margin:10px;
+            background-image: linear-gradient(-225deg,rgb(255, 99, 99) 0%,rgb(208, 98, 36) 34%,#ff1361 60%,rgb(255, 127, 63) 85% ,rgb(255, 99, 99) 100%);
+            background-clip: border-box;
+            background-size: 200% auto;
+            background-clip: text;
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            transition-duration: 1.3s;
+         }
+
+         .head{
+            text-align: center;
+        }
+         h1:hover{
+             letter-spacing:2px;
+             font-size: 85px;
+         }
+
+         @keyframes textclip {
+            to {
+                 background-position: 200% center;
+           }
+        }
+
+        .li1:hover{
+            color:black;
+            background-color: wheat;
+        }
+
+        .li1:hover .active{
+            color:black;
+        }
+
+        .tip-icon{
+            height:70px;
+            width:70px;
+            padding:20px;
+            transition-duration: 1s;
+        }
+
+        .tip-icon1{
+            height:100px;
+            width:100px;
+            padding:20px;
+            transition-duration: 1s;
+        }
+
+        .tip-icon2{
+            height:160px;
+            width:160px;
+            padding:30px;
+            margin-left: 15px;
+            transition-duration: 1s;
+        }
+
+        h3{
+            line-height: 29px;
+        }
+
+        
+        
+
+        .inner-div:hover .tip-icon{
+            width: 90px;
+            height: 90px;
+        }
+
+        .inner-div:hover .tip-icon1{
+            width: 120px;
+            height: 120px;
+        }
+        
+        .inner-div:hover .tip-icon2{
+            width: 170px;
+            height: 170px;
+        }
+
+        .in-fx{
+            height:200px;
+            width:230px;
+            background-color: #ff1361;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            margin:15px;
+            font-size: 20px;
+            border-radius: 5px;
+            transition-duration:2s ;
+        }
+
+        .inner-div:hover .in-fx{
+            margin-right: 34px;
+            background-color:black;
+        }
+        
+      .tip-icon3{
+          width:100px;
+          height: 100px;
+          animation:rtt 3s infinite;
+          transition-duration: 5s;
+          padding:0;
+          margin: 0;
+          position: relative;
+          top:10px;
+         
+      }
+
+      @keyframes rtt{
+          to{
+            transform: rotate(360deg);
+          }
+      }
+
+      .div12{
+          overflow: hidden;
+          padding:20px;
+    
+          
+      }
+      .div12 h2{
+          font-size: 20px;
+          padding:20px;
+          
+      }
+
+    
+
+      .div8{
+          background-image: url("https://cdn.wallpapersafari.com/15/31/LnYexw.jpg");
+          background-size: cover;
+      }
+
+      .div8:hover{
+          opacity:0.5;
+      }
+    
+
+      .tip-icon4{
+          width: 170px;
+          padding:10px;
+          transition-duration: 2.5s;
+      }
+
+
+      .div3{
+          overflow: hidden;
+      }
+
+      .div3:hover .tip-icon4{
+          transform: translateX(-300px) rotate(-180deg);
+      }
+
+      .child-div{
+          width: 340px;
+          height:199px;
+           border-radius: 5px;
+          transition-duration: 3s;
+          background-color: #EE204D;
+          transform: translate(400px,-192px);
+
+      }
+
+      .div3:hover .child-div{
+          transform: translate(4px,-192px);
+          background-color: black;
+      }
+
+      .div5{
+          background-image: url("space1.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+
+      .div5:hover{
+          opacity: 0.5;
+      }
+
+      .gamble-icon{
+          width:75px;
+      }
+
+      .slider{
+          width:95%;
+          overflow: hidden;
+          margin:20px auto;
+      }
+
+      .slide-track{
+          display: flex;
+          width:300%;
+          flex-direction:row;
+          overflow: hidden;
+          margin:30px auto;
+      }
+
+      .slide{
+          height:200px;
+          width:500px;
+          background: black;
+          color:white;
+          margin:10px;
+         animation:slide-animation 20s linear infinite alternate;
+      }
+
+      @keyframes slide-animation{
+        to{
+            transform: translateX(-340%);
+        }
+      }
+
+    
+      
+    </style>
+</head>
+<body>
+    <ul class="nav-bar">
+        <li class="li1"><a class="active a1" href="#">Home</a></li>
+        <li class="li1"><a class="active a2" href="#news">News</a></li>
+        <li class="li1"><a class="active a3" href="#contact">Contact</a></li>
+        <li class="li1"><a class="active a4" href="#about">About</a></li>
+      </ul>
+       <div class="head"><h1>Crime Awareness Tips</h1></div>
+       <div class="line"></div>
+      <div class="grid-div">
+          <div class="inner-div div1">
+              <img class="tip-icon" src="https://cdn-icons-png.flaticon.com/512/583/583990.png" alt="">
+              <h3>Be careful when using an ATM, especially when getting cash.</h3>
+              <h3>Never tell your access code to ANYONE. Never lend your ATM card to ANYONE. If you lose your ATM card, notify your bank or credit union immediately.</h3>
+          </div>
+          <div class="inner-div div2">
+              <img class="tip-icon" src="wallet.png" alt=""> 
+              <h3 style="padding:10px;">If possible, don't carry a purse. Never carry anything you can't afford to lose in it. Carry your purse across the front of your body, with your forearm across the front of the purse and your elbow held tightly against your side.
+                Carry your keys, wallet or other valuables in pockets in your clothes and not in your hand.
+                Carry minimum amounts of cash and credit cards. Keep a record of all of your card numbers. </h3>
+          </div>
+          <div class="inner-div div3">
+              <img class="tip-icon4" src="chip.png" alt="">
+              <div class="child-div">
+                  <img class="gamble-icon" src="gambling.png" alt="">
+                  <h3>Don't gamble when you're depressed.</h3>
+                  <h3>Find Alternatives to Gambling.</h3>
+                  <h3>Seek Professional Help.</h3>
+              </div>
+          </div>
+          <div class="inner-div div4">
+              <img class="tip-icon1" src="children.png" alt="">
+              <h3>Tell children to avoid strangers who may hang around playgrounds, public rest rooms, empty buildings, etc. Teach children to always take the same way home from school. Children should not walk next to curbs. Children should not wear expensive jewelry or clothing to school. Show children safe places they can go in your neighborhood in an emergency.</h3>
+          </div>
+          <div class="div5"></div>
+          <div class="inner-div">
+              <img class="tip-icon1" src="drug-addict.png" alt="">
+              <h3>
+              Understand how substance abuse develops.
+              Avoid Temptation and Peer Pressure.
+              Seek help for mental illness.
+              Examine the risk factors.</h3>
+          </div>
+          <div class="inner-div div7">
+              <img class="tip-icon2" src="hacker.png" alt="">
+              <div class="in-fx">
+                  <h3> Use an internet security suite.</h3>
+                </div>
+              <div class="in-fx"><h3>Use complicated passwords.</h3></div>
+              <div class="in-fx"><h3>Activate firewalls.</h3></div>
+          </div>
+          <div class="div8"></div>
+          
+          <div class="inner-div">
+              <img class="tip-icon1" src="call.png" alt="">
+              <h3>Do not give out your personal information or credit card number over the phone unless you initiated the call. </h3>
+          </div>
+          <div style="text-align: center; padding:30px;" class="inner-div">
+              <h3>Never ask for or accept a ride from a stranger. </h3>
+              <img class="tip-icon1" src="question.png" alt="">
+          </div>
+          <div class="inner-div div11">
+              <img class="tip-icon1" src="no-violence.png" alt="">
+              <h3>1. If you are a victim: There are trained counsellors and services in your community that can help you deal with being victimized by violence. </h3>
+              <h3>2. If you are abusive: If you think you are abusive or know you are being violent to others and want to stop, counselling can help. </h3>
+              <h3>3. If you see it, stop it! Watching, encouraging violence or doing nothing makes you a part of the problem.</h3>
+          </div>
+          <div class="inner-div div12">
+              <img class="tip-icon3" src="walking.png" alt="">
+              <h2>Plan your route ahead of time. Never walk alone at night, walk with a friend or your dog. </h2>
+          </div>
+          <div class="inner-div div13">
+              <img  style="float:right; padding:30px" class="tip-icon2" src="car.png" alt="">
+              <h3 style="padding:10px;">Always look inside your vehicle before getting in. If a stranger approaches while you are in a vehicle, keep the windows up, doors locked and engine running. Honk your horn if you need to attract attention. Always lock your car when leaving it. Don't leave anything valuable in your car if at all possible. Park in well-lit areas at night. Never pick up hitchhikers. </h3>
+          </div>
+         
+      </div>
+      
+      <div class="sdiv2">
+      <div class="slider">
+          <div class="slide-track">
+              <div class="slide">1
+                          
+              </div>
+
+              <div class="slide">2
+
+            </div>
+
+            <div class="slide">3
+
+            </div>
+
+            <div class="slide">4
+
+            </div>
+
+            <div class="slide">5
+
+            </div>
+
+            <div class="slide">6
+
+            </div>
+
+          </div>
+      </div>
+      </div>
+</body>
+</html>
